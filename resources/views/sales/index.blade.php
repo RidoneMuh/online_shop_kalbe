@@ -40,7 +40,7 @@
                     <td>
                         <div class="d-flex d-inline">
                             <a href="" class="btn btn-sm btn-info">Detail</a>
-                            <form action="{{ route('customers.destroy', $row->intSalesOrderID) }}" method="post">
+                            <form action="{{ route('sales.destroy', $row->intSalesOrderID) }}" method="post">
                             @method('delete')
                             @csrf
                             <button class="btn btn-sm btn-danger" type="submit">Delete</button>

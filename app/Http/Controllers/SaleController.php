@@ -85,6 +85,12 @@ class SaleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $response = Http::delete("http://localhost:8000/api/sales/$id");
+
+        $result = json_decode($response->getBody()->getContents());
+
+        if ($result->success === true) {
+            return redirect()->back();
+        }
     }
 }
